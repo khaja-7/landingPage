@@ -4,22 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ekalavya - Login</title>
+    <title>Ekalavya - The Consistency</title>
 
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
     <link href="landingPage.css" rel="stylesheet">
 </head>
 
 <body>
     <!-- Fixed Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom">
-        <div class="container">
+        <div class="container-fluid px-3">
             <!-- Brand Logo -->
             <a class="navbar-brand d-flex align-items-center" href="#" id="brand-logo">
                 <img src="logo.jpg" alt="EduPlatform Logo" class="brand-logo"
-                    style="width:32px;height:32px;margin-right:10px;border-radius:6px;object-fit:cover;" />
-                Ekalavya -The consistency
+                    style="width:32px;height:32px;border-radius:6px;object-fit:cover;" />
+                Ekalavya - The Consistency
             </a>
 
             <!-- Navbar Toggle for Mobile -->
@@ -31,28 +33,41 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#" id="nav-home">Home</a>
+                        <a class="nav-link" href="#home" id="nav-home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" id="nav-about">About</a>
+                        <a class="nav-link" href="#about" id="nav-about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" id="nav-features">Features</a>
+                        <a class="nav-link" href="#features" id="nav-features">Features</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" id="nav-contact">Contact</a>
+                        <a class="nav-link" href="#contact" id="nav-contact">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <div class="container login-container">
-        <div class="row justify-content-center">
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h1 class="hero-title">Empowering Students & Institutions</h1>
+                    <p class="hero-subtitle">Transform your educational journey with personalized learning, expert
+                        mentorship, and comprehensive progress tracking - all in one unified platform.</p>
+                    <button class="btn btn-hero" id="get-started-btn">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <!-- Login Card 1: Students (Up to 12th) -->
-            <div class="col-lg-4 col-md-6 col-sm-12">
+    <!-- Login Section -->
+    <div id="home" class="container login-container">
+        <div class="row justify-content-center">
+            <!-- First row: 2 cards -->
+            <div class="col-lg-5 col-md-6 mb-4">
                 <div class="login-card shadow-sm">
                     <h4>Login for Students<br>(Up to 12th)</h4>
 
@@ -76,9 +91,7 @@
                     </form>
                 </div>
             </div>
-
-            <!-- Login Card 2: UG Students -->
-            <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="col-lg-5 col-md-6 mb-4">
                 <div class="login-card shadow-sm">
                     <h4>Login for UG Students</h4>
 
@@ -102,9 +115,10 @@
                     </form>
                 </div>
             </div>
-
-            <!-- Login Card 3: Institutions -->
-            <div class="col-lg-4 col-md-6 col-sm-12">
+        </div>
+        <div class="row justify-content-center">
+            <!-- Second row: 1 centered card -->
+            <div class="col-lg-6 col-md-8">
                 <div class="login-card shadow-sm">
                     <h4>Login for Institutions</h4>
 
@@ -130,6 +144,309 @@
             </div>
         </div>
     </div>
+
+    <!-- About Section -->
+    <div id="about" class="container section-padding bg-light-custom">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <h2 class="text-center section-title">About Ekalavya</h2>
+                <div class="fs-5 text-center mb-4">
+                    <p>Welcome to the Ekalavya Platform! This comprehensive educational ecosystem is designed to provide
+                        secure and user-friendly access for three main groups:</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="text-center">
+                            <i class="bi bi-people-fill feature-icon"></i>
+                            <h5><strong>Students (Up to 12th)</strong></h5>
+                            <p>Access personalized study materials, track progress, and connect with mentors for
+                                academic support.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="text-center">
+                            <i class="bi bi-mortarboard-fill feature-icon"></i>
+                            <h5><strong>UG Students</strong></h5>
+                            <p>Manage coursework, collaborate on projects, and participate in academic communities to
+                                enhance your learning experience.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="text-center">
+                            <i class="bi bi-building feature-icon"></i>
+                            <h5><strong>Institutions</strong></h5>
+                            <p>Oversee student activities, manage resources, and analyze educational outcomes to improve
+                                institutional effectiveness.</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="mt-4 text-center fs-6">This project aims to simplify and secure the educational process for
+                    different user groups. With a modern UI and robust backend, Ekalavya ensures a seamless experience
+                    for students and institutions alike.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section id="features" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="section-title">Key Features</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-card">
+                        <i class="bi bi-person-check feature-icon"></i>
+                        <h5>Mentorship</h5>
+                        <p>Connect with experienced mentors who provide personalized guidance and support throughout
+                            your educational journey.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-card">
+                        <i class="bi bi-graph-up feature-icon"></i>
+                        <h5>Progress Tracking</h5>
+                        <p>Monitor your academic progress with detailed analytics and insights to identify areas for
+                            improvement.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-card">
+                        <i class="bi bi-journal-text feature-icon"></i>
+                        <h5>Personalized Study Plans</h5>
+                        <p>Get customized study plans tailored to your learning style, goals, and academic requirements.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="feature-card">
+                        <i class="bi bi-people feature-icon"></i>
+                        <h5>Collaboration Tools</h5>
+                        <p>Work together with peers through integrated collaboration features and group study sessions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section-padding bg-light-custom">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="section-title">How It Works</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h5>Register</h5>
+                        <p>Create your account and provide basic information about your educational background and
+                            goals.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h5>Select Role</h5>
+                        <p>Choose your role as a Student, UG Student, or Institution to access role-specific features
+                            and resources.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h5>Access Dashboard</h5>
+                        <p>Start your educational journey with your personalized dashboard and begin exploring all
+                            available features.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="section-title">What Our Users Say</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">"Ekalavya has completely transformed my study routine. The
+                            personalized study plans and mentorship program helped me improve my grades significantly!"
+                        </div>
+                        <div class="testimonial-author">- Priya Singh, Class 12 Student</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">"The collaboration tools are amazing! Working on group projects
+                            has never been easier. The platform keeps everything organized and accessible."</div>
+                        <div class="testimonial-author">- Rahul Kumar, Computer Science UG</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">"As an institution admin, the analytics and progress tracking
+                            features help us identify students who need additional support. It's an invaluable tool."
+                        </div>
+                        <div class="testimonial-author">- Dr. Anita Sharma, Institution Admin</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo/Screenshot Section -->
+    <section class="section-padding bg-light-custom">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="section-title">Platform Preview</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="text-center">
+                        <h5 class="mb-3">UG Student Dashboard</h5>
+                        <img src="Ugstudentdashboard.png" alt="UG Student Dashboard" class="demo-img img-fluid">
+                        <div>UG Student Dashboard Screenshot</div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="text-center">
+                        <h5 class="mb-3">Institution Dashboard</h5>
+                        <img src="institutiondashboard.png" alt="Institution Dashboard" class="demo-img img-fluid">
+                        <div>Institution Dashboard Screenshot</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            How do I get started with Ekalavya?
+                            <i class="bi bi-chevron-down float-end"></i>
+                        </button>
+                        <div class="faq-answer">
+                            Simply register for an account by clicking the "Get Started" button, select your role
+                            (Student, UG Student, or Institution), and complete your profile setup. You'll immediately
+                            gain access to your personalized dashboard.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            Is Ekalavya free to use?
+                            <i class="bi bi-chevron-down float-end"></i>
+                        </button>
+                        <div class="faq-answer">
+                            We offer both free and premium plans. The basic features are available at no cost, while
+                            advanced features like one-on-one mentorship and detailed analytics require a premium
+                            subscription.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            How does the mentorship program work?
+                            <i class="bi bi-chevron-down float-end"></i>
+                        </button>
+                        <div class="faq-answer">
+                            Our mentorship program matches students with experienced mentors based on academic goals,
+                            subjects, and learning preferences. Mentors provide regular guidance through video calls,
+                            assignments, and progress reviews.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" onclick="toggleFAQ(this)">
+                            Can institutions track multiple students' progress?
+                            <i class="bi bi-chevron-down float-end"></i>
+                        </button>
+                        <div class="faq-answer">
+                            Yes! Institution accounts have comprehensive dashboards that allow administrators to monitor
+                            all enrolled students' progress, generate reports, and identify students who may need
+                            additional support.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mb-4">Ready to get started?</h2>
+                    <p class="fs-5 mb-4">Join thousands of students and institutions who are already transforming their
+                        educational experience with Ekalavya.</p>
+                    <button class="btn btn-cta" id="create-account-btn">Create Account</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5>Ekalavya - The Consistency</h5>
+                    <p>Empowering students and institutions through innovative educational technology and personalized
+                        learning experiences.</p>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h6>Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#" id="terms-link">Terms of Use</a></li>
+                        <li><a href="#" id="privacy-link">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h6>Contact Information</h6>
+                    <p>
+                        <i class="bi bi-envelope"></i>
+                        <a href="mailto:support@ekalavya.edu">support@ekalavya.edu</a>
+                    </p>
+                </div>
+                <div class="col-lg-3 mb-4">
+                    <h6>Follow Us</h6>
+                    <div>
+                        <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>&copy; 2025 Ekalavya - The Consistency. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

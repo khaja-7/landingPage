@@ -1,11 +1,13 @@
-// DOM Content Loaded Event
+  // DOM Content Loaded Event
         document.addEventListener('DOMContentLoaded', function () {
-
             // Initialize form validation for all login forms
             initializeFormValidation();
 
             // Initialize navigation handlers
             initializeNavigation();
+
+            // Initialize CTA buttons
+            initializeCTAButtons();
         });
 
         // Form Validation Function
@@ -132,32 +134,81 @@
 
         // Navigation Handlers
         function initializeNavigation() {
-            // TODO: Backend Integration Point
-            // Replace these with actual routing logic when implementing SPA or server-side routing
-
+            // Smooth scroll navigation
             document.getElementById('nav-home').addEventListener('click', function (e) {
                 e.preventDefault();
-                console.log('Navigate to Home');
-                // window.location.href = '/home';
+                document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
             });
 
             document.getElementById('nav-about').addEventListener('click', function (e) {
                 e.preventDefault();
-                console.log('Navigate to About');
-                // window.location.href = '/about';
+                document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
             });
 
             document.getElementById('nav-features').addEventListener('click', function (e) {
                 e.preventDefault();
-                console.log('Navigate to Features');
-                // window.location.href = '/features';
+                document.getElementById('features').scrollIntoView({ behavior: 'smooth' });
             });
 
             document.getElementById('nav-contact').addEventListener('click', function (e) {
                 e.preventDefault();
-                console.log('Navigate to Contact');
-                // window.location.href = '/contact';
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
             });
+
+            // Footer links
+            document.getElementById('terms-link').addEventListener('click', function (e) {
+                e.preventDefault();
+                // TODO: Backend Integration Point
+                // window.location.href = '/terms';
+                console.log('Navigate to Terms of Use');
+            });
+
+            document.getElementById('privacy-link').addEventListener('click', function (e) {
+                e.preventDefault();
+                // TODO: Backend Integration Point
+                // window.location.href = '/privacy';
+                console.log('Navigate to Privacy Policy');
+            });
+        }
+
+        // CTA Button Handlers
+        function initializeCTAButtons() {
+            document.getElementById('get-started-btn').addEventListener('click', function () {
+                // TODO: Backend Integration Point
+                // window.location.href = '/register';
+                document.getElementById('home').scrollIntoView({ behavior: 'smooth' });
+            });
+
+            document.getElementById('create-account-btn').addEventListener('click', function () {
+                // TODO: Backend Integration Point
+                // window.location.href = '/register';
+                console.log('Navigate to registration page');
+                alert('Registration functionality will be implemented with backend integration.');
+            });
+        }
+
+        // FAQ Toggle Function
+        function toggleFAQ(button) {
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            if (answer.style.display === 'block') {
+                answer.style.display = 'none';
+                icon.classList.remove('bi-chevron-up');
+                icon.classList.add('bi-chevron-down');
+            } else {
+                // Close all other FAQs
+                document.querySelectorAll('.faq-answer').forEach(ans => ans.style.display = 'none');
+                document.querySelectorAll('.faq-question i').forEach(ic => {
+                    ic.classList.remove('bi-chevron-up');
+                    ic.classList.add('bi-chevron-down');
+                });
+                
+                // Open current FAQ
+                answer.style.display = 'block';
+                icon.classList.remove('bi-chevron-down');
+                icon.classList.add('bi-chevron-up');
+            }
         }
 
         // Utility Functions for Backend Integration
@@ -185,3 +236,14 @@
             button.disabled = loading;
             button.textContent = loading ? 'Logging in...' : 'Login';
         }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
